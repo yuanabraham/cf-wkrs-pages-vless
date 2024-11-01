@@ -3,7 +3,7 @@
 import { connect } from 'cloudflare:sockets';
 
 // 建议修改为自己的 UUID
-let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
+let userID = '1b7eb1b8-cc1a-4c79-9923-da307ea8aae0';
 
 // 生成配置文件的 CF 优选 IP
 const bestCFIP = "www.gov.se"
@@ -131,7 +131,7 @@ export default {
                     default:
                         // return new Response('Not found', { status: 404 });
                         // For any other path, reverse proxy to 'maimai.sega.jp' and return the original response
-                        url.hostname = 'maimai.sega.jp';
+                        url.hostname = 'data.video.qiyi.com';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
